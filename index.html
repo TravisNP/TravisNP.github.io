@@ -134,7 +134,7 @@
 
         <br> <br> <br>
 
-        <p>Template from <a href="https://rosacodes.gumroad.com/l/personal-website-template">Rosacodes</a></p>
+        <p>Template from <a href="https://rosacodes.gumroad.com/l/personal-website-template" target="_blank">Rosacodes</a></p>
 
         <!--MODALS-->
 
@@ -185,7 +185,6 @@
           </div>
         </div>
 
-        <!-- Modal for Button #2 - change inside information such as images and text to make it your own-->
         <div id="modal2" class="modal">
           <div class="modal-content">
             <span class="closeModal2">&times;</span>
@@ -201,16 +200,15 @@
             <p>The action space is quite easy to define as it is just the four cardinal directions in which the snake can move. Next, I needed to define the rewards for actions the snake can take. If the snake wins or dies, it should get a large amount of positive/negative points respectively. If the snake eats a fruit, it should get a decent amount of points. To prioritize not wasting time, if the snake moves without winning, dying, or eating a fruit, it should lose a small amount of points. Now we just have to train our model, which corresponds to populating and updating the state x action space (qtable) according to the following equation</p>
             <p>qtable[state][action] = (1 - &alpha;) * qtable[state][action] + &alpha; * (reward + &gamma; * max(qtable[newState])).</p>
             <p>The first term determines how much of the old value to keep. The second term updates the entry with the reward for taking the action, and the maximum of the action space of the next state. Note that the very last term is important as it allows for the back propogation of data back to earlier states. For example, if taking a certain action in some state will lead to winning 10 moves down the line, this term allows that action to be learned.</p>
-            <p>Looking at the results, we can see a direct correlation to the number of epocs with the win percentage.</p>
-            <div><img src="assets/SnakeReflections.png" style="height: 100px; object-fit: contain; width: 100%;" class="d-block w-100" alt="..."></div>
-            <p>However, we can make training even faster. When creating the qtable, instead of having all 0 initial entries, we can check to see if the four cells surrounding the head are occupied. If they are, then this state leads to death no matter what action taken, and this entry be populated with a large negative value. Looking at the results, we see the model learns to win slightly faster than before.</p>
-            <div><img src="assets/SnakeReflections.png" style="height: 100px; object-fit: contain; width: 100%;" class="d-block w-100" alt="..."></div>
+            <p>Looking at the results below, we can see a direct correlation to the number of epocs with the win percentage. However, we can make training even faster. When creating the qtable, instead of having all 0 initial entries, we can check to see if the four cells surrounding the head are occupied. If they are, then this state leads to death no matter what action taken, and this entry be populated with a large negative value. Looking at the results, we see the model learns to win and grow the snake slightly faster and than before. The data show below is an average over 10,000 simulations.</p>
+            <div><img src="assets/SnakeWin.png" style="height: 300px; object-fit: contain; width: 100%;" class="d-block w-100" alt="..."></div>
+            <div><img src="assets/SnakeLength.png" style="height: 300px; object-fit: contain; width: 100%;" class="d-block w-100" alt="..."></div>
+            <p></p>
           </div>
         </div>
 
         <!--Button #3 goes to outside link, so no modal is necessary-->
 
-        <!-- Modal for Button #4 - change inside information such as images and text to make it your own-->
         <div id="modal4" class="modal">
           <div class="modal-content">
             <span class="closeModal4">&times;</span>
