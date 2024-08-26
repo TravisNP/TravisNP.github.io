@@ -28,11 +28,10 @@
         <!-- Introduction -->
         <div class="flex-container-reverse" style="padding-bottom: 50px; padding-top: 20px;">
           <div class="big-container-left" style="">
-            <!--   -->
-            <p style="padding-bottom: 5px;">Hi, my name is Travis and I'm interested in a wide range of computer science and math topics. TODO: Expand on this (machine learning, algorithms, etc.)</p>
+            <p style="padding-bottom: 5px;">Hi, my name is Travis and I'm interested in solving complex problems using a combination of computer science and math. My background consists mainly of mainly pure/applied math and computer science at the University of South Carolina, and I'm currently obtaining my masters in CS at UW-Madison. Currently, I've been interested in machine learning algorithms and has been my main focus at Madison. In my recent past, I've done number theory and biomathematical modeling work.</p>
           </div>
-          <div class="small-container-right">
-            <img src="assets/stockphoto.jpg" class="title-image">
+          <div class="small-container-right flex-container-center">
+            <img src="assets/travisKrugerUpperBody.png" class="small-title-image">
           </div>
         </div>
 
@@ -42,7 +41,7 @@
         <div class="flex-container-reverse" style="padding-bottom: 50px; padding-top: 40px;">
           <div class="big-container-left">
             <h3>Linear Support Vector Machine with Adam Optimizer - C++, no outside libraries</h3>
-            <p class="time-text">August 2024 </p>
+            <p class="time-text">August 2024</p>
             <p>In my Mathematical Foundations of ML class, we covered a wide range of topics, one of which was Kernel Support Vector Machines. Using what I had learned from this class and previous calculus knowledge, I coded a linear SVM by solving the primal using lagrange multipliers. However, I wasn't satisfied with the results as I originally used a constant learning rate. If my learning rate was too large, my decision boundary wouldn't converge to the optimal, but if too small, took an unreasonable amount of time. I experienced the same problem when I implemented an exponential learnign rate, and so I learned about Adam from this <a href="https://machinelearningmastery.com/adam-optimization-from-scratch/" target="_blank">article</a> (even though Adam has it's own hyperparameters). I used validation testing to stop training early. The code for this project can be found <a href="https://github.com/TravisNP/lsvm" target="_blank">here</a>.</p>
             <button style="padding-bottom: 5px;" type="button" class="btn btn-outline-success" id="btn1">See more</button>
           </div>
@@ -55,25 +54,12 @@
         <div class="flex-container-reverse" style="padding-bottom: 50px; padding-top: 40px;">
           <div class="big-container-left">
             <h3>Reinforcment Learning by Q-Learning, snake - C++, no outside libraries</h3>
-            <p class="time-text">July 2024</p>
+            <p class="time-text">July - Early August 2024</p>
             <p>Although I had no knowledge of reinforcement learning besides the basics, I wanted to give it a try. From this <a href="https://medium.com/analytics-vidhya/a-beginners-guide-to-reinforcement-learning-and-its-basic-implementation-from-scratch-2c0b5444cc49" target="_blank">article</a>, I learned about Q-learning through an example of teaching a taxicab the shortest distance to pickup and drop off passengers and decided to apply what I'd learned to create a model that can play the classic video game snake. I carefully thought about how to model the state efficiently so that training would be as fast as possible and used the symmetry of the square to reduce the state space. In the end, I successfully created models that have a >99% completion rate on 4x4 boards, although the code works for any board size less than 10x10. The code for this project can be found <a href="https://github.com/TravisNP/QLearningSnake" target="_blank">here</a>.</p>
             <button style="padding-bottom: 5px;" type="button" class="btn btn-outline-success" id="btn2">See more</button>
           </div>
           <div class="small-container-right">
             <img src="assets/snakeVisualization.png" class="title-image">
-          </div>
-        </div>
-
-        <!-- Current Project #3 -->
-        <div class="flex-container-reverse" style="padding-bottom: 50px; padding-top: 40px;">
-          <div class="big-container-left">
-            <h3>Mauris</h3>
-            <p class="time-text">June 2022 - TBD</p> <!--Add your own dates-->
-            <p>Consequat id porta nibh venenatis cras sed felis eget. Viverra accumsan in nisl nisi. Quam id leo in vitae. Amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus.</p>
-            <button style="padding-bottom: 5px;" type="button" class="btn btn-outline-success" id="btn3">Visit</button>
-          </div>
-          <div class="small-container-right">
-            <img src="assets/project3.jpg" class="title-image">
           </div>
         </div>
 
@@ -126,7 +112,7 @@
 
         <br> <br>
 
-        <p style="padding-bottom: 20px;">I'd love to get in contact with you, so please feel free to reach me on any of these platforms. </p>
+        <p style="padding-bottom: 20px;">If you'd like to get into contact with me, please reach out on one of the platforms below.</p>
 
         <a href="mailto:tpencee@gmail.com" class="fa fa-paper-plane" style="margin-right: 10px"></a>
         <a href="https://www.linkedin.com/in/travis-pence-cs/" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin" style="margin-right: 10px"></a>
@@ -135,6 +121,7 @@
         <br> <br> <br>
 
         <p>Template from <a href="https://rosacodes.gumroad.com/l/personal-website-template" target="_blank">Rosacodes</a></p>
+        <p>Photo Creds: All me</p>
 
         <!--MODALS-->
 
@@ -142,46 +129,17 @@
         <div id="modal1" class="modal">
           <div class="modal-content">
             <span class="closeModal1">&times;</span>
-            <h2>Porttitor massa</h2>
+            <h2>Linear SVM with Adam Optimizer/Mini-batch GD</h2>
             <br>
-            <div id="carouselIndicators1" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="assets/desksetup2.webp" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/desksetup3.jpeg" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/desksetup4.webp" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <br>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators1" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators1" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-          </div>
-            <p>Amet consectetur adipiscing elit duis. Sagittis purus sit amet volutpat consequat mauris nunc congue nisi. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Rutrum tellus pellentesque eu tincidunt tortor aliquam. Eu facilisis sed odio morbi. Amet nisl suscipit adipiscing bibendum est ultricies integer quis.</p>
-            <p>Skills used:</p>
-            <ul>
-              <li>HTML, CSS, JavaScript</li>
-              <li>Google Firebase</li>
-            </ul>
-            <p>Skills learned:</p>
-            <ul>
-              <li>Marketing</li>
-            </ul>
-            <p>Amet nisl suscipit adipiscing bibendum est ultricies integer quis.</p>
+            <div>
+              <img src="assets/lsvmGauss.png" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="IMG not found">
+            </div>
+            <p>Training data from two multivariate normal distributions along with the learned decision boundary plotted with gnuplot.</p>
+            <p>I learned the concepts and math behind support vector machines in my Mathematical Foundations for ML course, which I will explain breifly. Given labeled data drawn from two distinct class distributions, what is the best decision boundary? I will first talk about the linear case, and then how kernel SVM differs. SVMs take the approach that the best decision boudnary is that which splits the classes directly down the "middle", hoping this has the best results when generalizing to new data. Another way of putting this is that the decision boundary should be equal distance from both classes. SVM models this distance by requiring all data be outside some margin around the decision boundary. Initially, this seems fine, however, what if the data has outliers or is not completely linearly separable? This leads to the distinction between hard-margin SVM and soft-margin SVM. Hard-margin SVM requires that all data be outside the margin, which soft-margin SVM does not, but introduces penalties for datapoints that lie inside the margin. Looking at the picture above, you can deduce that I must have used soft-margin SVM as my data is not linearly separable.</p>
+            <p>Therefore, the goal of soft-margin SVM is to just maximize the width of the margin subject to the penalties of including datapoints inside the margin. Skipping over some math, maximizing the width turns into minimizing the square of the decision boundary. We can turn our constrained optimization problem into an unconstrained problem using <a href="https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/constrained-optimization/a/lagrange-multipliers-single-constraint" target="_blank">Lagrange multipliers</a>. Now that we have an unconstrained optimization problem, we can easily solve this using gradient descent as the optimization problem is <b>convex</b> and our objective is quadratic.</p>
+            <p>I first chose to implement this using mini-batch gradient descent with a constant learning rate, however, I was not satisfied with the speed of learning on large datasets (> ~10,000,000 datapoints). I then implemented an exponential learning rate, which was better, but still had similar problems. After some online research, I chose to implement Adam, a version of gradient descent that provides a dynamic learning rate on a per parameter basis. While I did not dive into why Adam works, the <a href="https://machinelearningmastery.com/adam-optimization-from-scratch/" target="_blank">implementation</a> was quite easy. Since we are already calculating the gradient for gradient descent, updating the first and second moments of each parameter is a simple calculation. After another simple calculation for bias correction the final updated parameter value is again, a simple calculation. While Adam does have it's own hyperparameters, I found that they required much less tuning than constant and exponential learning rates.</p>
+            <p>All my work so far had been on multivariate normal data I had generated myself, and so I wanted to test my work on real world data. I found an almost linearly separable <a href="https://archive.ics.uci.edu/dataset/267/banknote+authentication" target="_blank">dataset</a> on forged banknotes. I first preprocessed the 4-dimensional data using Linux's sed, awk, and shuf commands and then wrote a bash script to split the data into 60% training, 20% testing, and 20% validation datasets. The learned decision boundary had a ~0.978 accuracy, misclassifying only 6 datapoints.</p>
+            <p>This project, along with the already processed banknote data and use instructions, can be found <a href="https://github.com/TravisNP/lsvm" target="_blank">here</a>.</p>
           </div>
         </div>
 
@@ -203,6 +161,7 @@
             <p>Looking at the results below, we can see a direct correlation to the number of epocs with the win percentage. However, we can make training even faster. When creating the qtable, instead of having all 0 initial entries, we can check to see if the four cells surrounding the head are occupied. If they are, then this state leads to death no matter what action taken, and this entry be populated with a large negative value. Looking at the results, we see the model learns to win and grow the snake slightly faster and than before. The data show below is an average over 10,000 simulations.</p>
             <div><img src="assets/SnakeWin.png" style="height: 300px; object-fit: contain; width: 100%;" class="d-block w-100" alt="..."></div>
             <div><img src="assets/SnakeLength.png" style="height: 300px; object-fit: contain; width: 100%;" class="d-block w-100" alt="..."></div>
+            <p>The entire project, models differing in the number of training epocs and initial qtable, data for the above graphs, and use instructions can be found <a href="https://github.com/TravisNP/QLearningSnake" target="_blank">here</a>.</p>
             <p></p>
           </div>
         </div>
@@ -253,230 +212,6 @@
         </div>
 
         <!--Button #6 goes to outside link, so no modal is necessary-->
-
-        <!-- MODALS FOR HOBBIES -->
-
-        <!-- Modal for Hobby Button #1 - change inside information such as images and text to make it your own-->
-        <div id="modalHobby1" class="modal">
-          <div class="modal-content">
-            <span class="closeModalHobby1">&times;</span>
-            <h2>Tennis</h2>
-            <br>
-            <div id="carouselIndicatorsHobby1" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselIndicatorsHobby1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselIndicatorsHobby1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselIndicatorsHobby1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="https://images.pexels.com/photos/5730299/pexels-photo-5730299.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://images.pexels.com/photos/5739122/pexels-photo-5739122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://images.pexels.com/photos/5836917/pexels-photo-5836917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <br>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicatorsHobby1" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicatorsHobby1" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-          </div>
-            <p>Egestas congue quisque egestas diam in arcu cursus euismod. Accumsan lacus vel facilisis volutpat est velit egestas dui. Nulla porttitor massa id neque aliquam vestibulum morbi blandit. Enim ut tellus elementum sagittis vitae et leo duis. Neque gravida in fermentum et sollicitudin ac. Pharetra et ultrices neque ornare aenean euismod. Tincidunt id aliquet risus feugiat in ante metus dictum.</p>
-          </div>
-        </div>
-
-        <!-- Modal for Hobby Button #2 - change inside information such as images and text to make it your own-->
-        <div id="modalHobby2" class="modal">
-          <div class="modal-content">
-            <span class="closeModalHobby2">&times;</span>
-            <h2>Basketball</h2>
-            <br>
-            <div id="carouselIndicatorsHobby2" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselIndicatorsHobby2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselIndicatorsHobby2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselIndicatorsHobby2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="https://images.pexels.com/photos/163452/basketball-dunk-blue-game-163452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://images.pexels.com/photos/1080882/pexels-photo-1080882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://images.pexels.com/photos/1332237/pexels-photo-1332237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <br>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicatorsHobby2" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicatorsHobby2" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-          </div>
-            <p>Suscipit tellus mauris a diam maecenas sed enim ut. Eu augue ut lectus arcu bibendum at. Auctor augue mauris augue neque gravida in. Fringilla ut morbi tincidunt augue interdum velit euismod in. Etiam sit amet nisl purus in mollis nunc sed id. Ullamcorper eget nulla facilisi etiam dignissim diam quis.</p>
-          </div>
-        </div>
-
-        <!-- Modal for Hobby Button #3 - change inside information such as images and text to make it your own-->
-        <div id="modalHobby3" class="modal">
-          <div class="modal-content">
-            <span class="closeModalHobby3">&times;</span>
-            <h2>Soccer</h2>
-            <br>
-            <div id="carouselIndicatorsHobby3" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselIndicatorsHobby3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselIndicatorsHobby3" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselIndicatorsHobby3" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://images.pexels.com/photos/3148452/pexels-photo-3148452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <br>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicatorsHobby3" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicatorsHobby3" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-          </div>
-            <p>Augue neque gravida in fermentum et sollicitudin ac orci. Donec enim diam vulputate ut pharetra sit amet aliquam. Praesent semper feugiat nibh sed pulvinar proin. At ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget. Posuere ac ut consequat semper. Sollicitudin tempor id eu nisl nunc mi. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus.</p>
-          </div>
-        </div>
-
-        <!-- Modal for Hobby Button #4 - change inside information such as images and text to make it your own-->
-        <div id="modalHobby4" class="modal">
-          <div class="modal-content">
-            <span class="closeModalHobby4">&times;</span>
-            <h2>Piano</h2>
-            <br>
-            <div id="carouselIndicatorsHobby4" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselIndicatorsHobby4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselIndicatorsHobby4" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselIndicatorsHobby4" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="https://images.pexels.com/photos/322719/pexels-photo-322719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://images.pexels.com/photos/2378209/pexels-photo-2378209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://images.pexels.com/photos/164715/pexels-photo-164715.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <br>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicatorsHobby4" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicatorsHobby4" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-          </div>
-            <p>Augue neque gravida in fermentum et sollicitudin ac orci. Donec enim diam vulputate ut pharetra sit amet aliquam. Praesent semper feugiat nibh sed pulvinar proin. At ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget. Posuere ac ut consequat semper. Sollicitudin tempor id eu nisl nunc mi. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus.</p>
-          </div>
-        </div>
-
-        <!-- Modal for Hobby Button #5 - change inside information such as images and text to make it your own-->
-        <div id="modalHobby5" class="modal">
-          <div class="modal-content">
-            <span class="closeModalHobby5">&times;</span>
-            <h2>Painting</h2>
-            <br>
-            <div id="carouselIndicatorsHobby5" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselIndicatorsHobby5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselIndicatorsHobby5" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselIndicatorsHobby5" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="https://images.pexels.com/photos/2728587/pexels-photo-2728587.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://images.pexels.com/photos/6184431/pexels-photo-6184431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://images.pexels.com/photos/6404197/pexels-photo-6404197.jpeg?auto=compress&cs=tinysrgb&w=800" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <br>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicatorsHobby5" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicatorsHobby5" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-          </div>
-            <p>Augue neque gravida in fermentum et sollicitudin ac orci. Donec enim diam vulputate ut pharetra sit amet aliquam. Praesent semper feugiat nibh sed pulvinar proin. At ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget. Posuere ac ut consequat semper. Sollicitudin tempor id eu nisl nunc mi. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus.</p>
-          </div>
-        </div>
-
-        <!-- Modal for Hobby Button #5 - change inside information such as images and text to make it your own-->
-        <div id="modalHobby6" class="modal">
-          <div class="modal-content">
-            <span class="closeModalHobby6">&times;</span>
-            <h2>Skiing</h2>
-            <br>
-            <div id="carouselIndicatorsHobby6" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselIndicatorsHobby6" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselIndicatorsHobby6" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselIndicatorsHobby6" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="https://images.pexels.com/photos/848618/pexels-photo-848618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://images.pexels.com/photos/47356/freerider-skiing-ski-sports-47356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://images.pexels.com/photos/3193846/pexels-photo-3193846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="height: 400px; object-fit: contain; width: 100%;" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <br>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicatorsHobby6" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicatorsHobby6" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-          </div>
-            <p>Augue neque gravida in fermentum et sollicitudin ac orci. Donec enim diam vulputate ut pharetra sit amet aliquam. Praesent semper feugiat nibh sed pulvinar proin. At ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget. Posuere ac ut consequat semper. Sollicitudin tempor id eu nisl nunc mi. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus.</p>
-          </div>
-        </div>
 
       </center>
     </div>

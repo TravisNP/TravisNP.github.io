@@ -79,6 +79,19 @@ p {
   width: 80%;
 }
 
+.small-title-image {
+  width: 50%;
+  height: auto;
+  margin-left: 50px;
+}
+
+.flex-container-center {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;    /* Centers vertically */
+  height: 100%;           /* Optional: Make sure the container takes full height */
+}
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -243,7 +256,7 @@ ul {
   .flex-container-reverse {
     flex-direction: column-reverse;
   }
-  
+
   .big-container-left, .small-container-right {
     flex: 100%;
   }

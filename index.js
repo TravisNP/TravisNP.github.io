@@ -17,7 +17,7 @@ var granimInstance = new Granim({
     direction: 'top-bottom',
     isPausedWhenNotInView: true,
     image : {
-        source: 'assets/snow.jpg', //change image for intro section if desired
+        source: 'assets/arch2000.jpg', //change image for intro section if desired
         blendingMode: 'multiply',
     },
     states : {
@@ -83,12 +83,6 @@ window.onclick = function(event) {
   if (event.target == modal2) {
     modal2.style.display = "none";
   }
-}
-
-//BUTTON 3 -- links to outside website
-var btn3 = document.getElementById("btn3");
-btn3.onclick = function() {
-  window.open("https://www.nintendo.com", "_blank") //TODO add your link
 }
 
 //BUTTON 4
