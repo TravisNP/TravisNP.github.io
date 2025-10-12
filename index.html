@@ -23,99 +23,151 @@
           <p style="padding-top: 25px; color: white;" id="app"></p>
         </div>
 
-        <h2 style="padding-bottom: 10px; padding-top: 10px;">About Me</h2>
+        <!-- Navigation Tabs -->
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true">About Me</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="current-research-tab" data-bs-toggle="tab" data-bs-target="#current-research" type="button" role="tab" aria-controls="current-research" aria-selected="false">Current Research</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="past-research-tab" data-bs-toggle="tab" data-bs-target="#past-research" type="button" role="tab" aria-controls="past-research" aria-selected="false">Past Research</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="blog-tab" data-bs-toggle="tab" data-bs-target="#blog" type="button" role="tab" aria-controls="blog" aria-selected="false">The Latest Dive</button>
+          </li>
+        </ul>
 
-        <!-- Introduction -->
-        <div class="flex-container-reverse" style="padding-bottom: 50px; padding-top: 20px;">
-          <div class="big-container-left" style="">
-            <p style="padding-bottom: 5px;">Hi, my name is Travis and I'm interested in solving complex problems using a combination of computer science and math. My background consists mainly of mainly pure/applied math and computer science at the University of South Carolina, and I'm currently obtaining my PhD in CS at UW-Madison. Currently, I've been interested in machine learning algorithms and has been my main focus at Madison. In my recent past, I've done number theory and biomathematical modeling work.</p>
-          </div>
-          <div class="small-container-right flex-container-center">
-            <img src="assets/travisKrugerUpperBody.png" class="small-title-image">
-          </div>
-        </div>
+        <!-- Tab Content -->
+        <div class="tab-content" id="myTabContent">
 
-        <h2 style="padding-bottom: 20px">My Current Projects</h2>
+          <!-- About Me Section -->
+          <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+            <h2 style="padding-bottom: 10px; padding-top: 10px;">About Me</h2>
+            <div class="flex-container-reverse" style="padding-bottom: 50px; padding-top: 20px;">
+              <div class="big-container-left" style="">
+                <p style="padding-bottom: 15px;">Hello! If you've found this webpage, I'm glad you are here :). I'm a second-year Computer Science Ph.D. student at the University of Wisconsin-Madison working on Machine / Deep Learning. I like working on problems where mathematical structure can lead to concrete improvements, whether that's capability, efficiency, understanding or some combination of the three.</p>
 
-        <!-- Current Project #1 -->
-        <div class="flex-container-reverse" style="padding-bottom: 50px; padding-top: 40px;">
-          <div class="big-container-left">
-            <h3>Linear Support Vector Machine with Adam Optimizer - C++, no outside libraries</h3>
-            <p class="time-text">August 2024</p>
-            <p>In my Mathematical Foundations of ML class, we covered a wide range of topics, one of which was Kernel Support Vector Machines. Using what I had learned from this class and previous calculus knowledge, I coded a linear SVM by solving the primal using lagrange multipliers. However, I wasn't satisfied with the results as I originally used a constant learning rate. If my learning rate was too large, my decision boundary wouldn't converge to the optimal, but if too small, took an unreasonable amount of time. I experienced the same problem when I implemented an exponential learnign rate, and so I learned about Adam from this <a href="https://machinelearningmastery.com/adam-optimization-from-scratch/" target="_blank">article</a> (even though Adam has it's own hyperparameters). I used validation testing to stop training early. The code for this project can be found <a href="https://github.com/TravisNP/lsvm" target="_blank">here</a>.</p>
-            <button style="padding-bottom: 5px;" type="button" class="btn btn-outline-success" id="btn1">See more</button>
-          </div>
-          <div class="small-container-right">
-            <img src="assets/lsvmGauss.png" class="title-image">
-          </div>
-        </div>
+                <p style="padding-bottom: 15px;">My most recent work at NeurIPS borrows from Clifford algebra to decompose the attention matrices in small language mdoels into geometric irreducibles, achieving an exponential reduction in parameter count. I'm collaborating with a systems lab to implement a compute friendly version of the decomposition algorithm at a low level to reduce memory bandwidth constraints. Beyond this, I'm looking at how other mathematical ideas could help with latent space steering, multi-token generation, and reasoning in LLMs.</p>
 
-        <!-- Current Project #2 -->
-        <div class="flex-container-reverse" style="padding-bottom: 50px; padding-top: 40px;">
-          <div class="big-container-left">
-            <h3>Reinforcment Learning by Q-Learning, snake - C++, no outside libraries</h3>
-            <p class="time-text">July - Early August 2024</p>
-            <p>Although I had no knowledge of reinforcement learning besides the basics, I wanted to give it a try. From this <a href="https://medium.com/analytics-vidhya/a-beginners-guide-to-reinforcement-learning-and-its-basic-implementation-from-scratch-2c0b5444cc49" target="_blank">article</a>, I learned about Q-learning through an example of teaching a taxicab the shortest distance to pickup and drop off passengers and decided to apply what I'd learned to create a model that can play the classic video game snake. I carefully thought about how to model the state efficiently so that training would be as fast as possible and used the symmetry of the square to reduce the state space. In the end, I successfully created models that have a >99% completion rate on 4x4 boards, although the code works for any board size less than 10x10. The code for this project can be found <a href="https://github.com/TravisNP/QLearningSnake" target="_blank">here</a>.</p>
-            <button style="padding-bottom: 5px;" type="button" class="btn btn-outline-success" id="btn2">See more</button>
+                <p style="padding-bottom: 15px;">Before coming to Madison, I did my undergrad at the University of South Carolina, where I double-majored in Computer Science and Mathematics. I spent my time doing research in pretty different areas, including building C++ tools to simulate DNA thermodynamics at Rutgers, exploring Frobenius numbers in various settings at Auburn, and working on graph domination games with mathematicians in the Masamu program in Southern Africa.</p>
+              </div>
+              <div class="small-container-right flex-container-center">
+                <img src="assets/travisKrugerUpperBody.png" class="small-title-image">
+              </div>
+            </div>
           </div>
-          <div class="small-container-right">
-            <img src="assets/snakeVisualization.png" class="title-image">
-          </div>
-        </div>
 
-        <!-- Previous Research Experience -->
-        <h2 style="padding-bottom: 20px">Previous Work (Recent to Old)</h2>
+          <!-- Current Research Section -->
+          <div class="tab-pane fade" id="current-research" role="tabpanel" aria-labelledby="current-research-tab">
+            <h2 style="padding-bottom: 20px; padding-top: 20px;">My Current Work</h2>
+            <p style="text-align: left; padding-left: 5%; padding-right: 5%;"><strong>What are we asking?</strong> What if deep learning models could be built by composing simple, interpretable modules instead of training billions of opaque parameters? This idea isn't new, and has been explored several times with examples of capsule networks, mixture of experts architectures, low rank representations, and mechanistic interpretability research. We ask a more fundamental question; if we want to synthesize these layers from their most basic primitives, how many such objects would we need? Our goal now becomes: can we identify a minimal set of irreducibles that combine in specific ways to realize the full functionality of the module?</p>
+            <p style="text-align: left; padding-left: 5%; padding-right: 5%;"><strong>Why does this matter?</strong> This compositional view, where low-level primitives combine into complex functionality, could transform how we design, understand, and control these networks. For example, LLMs are memory bandwidth constrained, meaning for large enough models, loading of the weights actually takes more time than the computation itself. If we can construct these large weight matrices from a small number of parameters on chip, we have traded memory transfer for compute, a favorable trade if the compute isn't overbearing.</p>
+            <p style="text-align: left; padding-left: 5%; padding-right: 5%;"><strong>How do we tackle this?</strong> We need to identify what these primitives actually are. We start with linear layers, the parameter-heavy workhorses of modern LLMs, and ask: can we construct them from geometric building blocks? To answer this, we borrow from Clifford algebra, an extension of Euclidean space that allows one to add vectors to scalars and "multiply" vectors together to form more complex objects. If this sounds strange, it's only because you haven't thought about it this way before. You already know at least one Clifford algebra, the complex numbers. You are combining two different things, a real number and an imaginary number, to form a different object that you know of as a complex number.</p>
+            <p style="text-align: left; padding-left: 5%; padding-right: 5%;">For a more thorough explanation, see the <a href="https://doi.org/10.48550/arXiv.2507.11688" target="_blank">NeurIPS paper</a> as what follows is only a high-level overview. We can think of &#8477;<sup>d</sup> as embedded within the Clifford algebra Cl(d) by assining a basis vector to each dimension of &#8477;<sup>d</sup>. These basis vectors serve as the generators of Cl(d). By combining these generators in different ways, we form higher order interactions between any combination of the base dimensions of &#8477;<sup>d</sup>. Simple combinatorics tell us that the basis of Cl(d) formed from these generators is 2<sup>d</sup>-dimensional.</p>
+            <p style="text-align: left; padding-left: 5%; padding-right: 5%;"><strong>The key insight:</strong> If our input is originally in &#8477;<sup>d</sup>, we can view it as living in Cl(log d), imposing the algebraic structure of the Clifford algebra. By letting data live in this higher dimensional space, we can use objects from Clifford algebra (bivectors that represent interactions between two basis generators), which are <i style="font-style: italic;">O</i>(log<sup>2</sup>d)-dimensional, to parametrize operators (rotors that represent elements of the Spin group) that transform the data. This reduces the parameter count from <i style="font-style: italic;">O</i>(d<sup>2</sup>) for a dense linear layer to <i style="font-style: italic;">O</i>(log<sup>2</sup>d). In the paper, we present closed-form, differentiable algorithms for converting from bivectors to rotors and show that for small language models, such as LLaMa-3.2 1B, this construction may be able to learn the linguistric structure captured by standard dense layers.</p>
+            <p style="text-align: left; padding-left: 5%; padding-right: 5%;"><strong>Where do we go from here?</strong> This work is a feasibility study. We've shown the approach works in principle, but haven't yet realized its full practical potential. Training language models from scratch is extremely expensive, which we do not have the capacity to do. To make this practical, we've developed compute-efficient versions of our decomposition algorithms and are now collaborating with a systems lab at UW-Madison. The goal remains the same: trade memory bandwidth for compute.</p>
+            <h2 style="padding-bottom: 20px; padding-top: 20px;">A Simple Demonstration</h2>
+            <div style="display: flex; align-items: center; gap: 20px; padding: 0 5%;">
+              <div id="3d-container" style="flex: 1; height: 600px; border-radius: 15px; overflow: hidden;"></div>
+              <div style="flex: 1; text-align: left;">
+                <p>The red and blue vectors define the purple bivector, which represents an oriented plane. The green point rotates to the yellow point within this plane, with the rotation angle determined by the bivector's magnitude. Note that this visualization only shows the vector component, higher-grade interactions are also transformed by the rotor, but cannot be visualized in 3D. You can move the vectors around to get a better feel for how this works.</p>
+              </div>
+            </div>
+          </div>
 
-        <!-- Most Recent -->
-        <div class="flex-container" style="padding-bottom: 100px; padding-top: 50px;">
-          <div class="small-container-left" style="">
-            <img src="assets/FrobGen.png" alt="" class="title-image">
-          </div>
-          <div class="big-container-right" style="">
-            <h3>SAMSA-Masamu Program</h3>
-            <p class="time-text">November 2022 - March 2023</p>
-            <p style="padding-bottom: 10px;"> For the latter half of November, I attended the <a href="https://cws.auburn.edu/shared/files?id=217&filename=Masamu%202022%20Program%20Files.pdf" target="_blank">Masamu Advanced Study Institute (MASI)</a> and the associated conference in Maputo, Mozambique and found other mathematicians to collaborate on a pure maths problem of our choice. I explored a problem I previously worked on during my REU at Auburn, finding a closed solution to the <a href="https://en.wikipedia.org/wiki/Coin_problem" target="_blank">Frobenius Coin problem</a> in three variables. After arriving back in the states, we continued our work and in the end theorized a geometric algorithm to partition the FC problem into 4 main cases, each having an infinite amount of subcases, and visualized the algorithm in Python. I found an exact equation for the second layer of each case, and the rest of was passed on to future REU students to complete.</p>
-            <button type="button" class="btn btn-outline-success" id="btn4">See more</button>
-          </div>
-        </div>
+          <!-- Past Research Section -->
+          <div class="tab-pane fade" id="past-research" role="tabpanel" aria-labelledby="past-research-tab">
+            <h2 style="padding-bottom: 20px; padding-top: 20px;">Previous Work (Recent to Old)</h2>
+            <!-- Most Recent -->
+            <div class="flex-container" style="padding-bottom: 100px; padding-top: 50px;">
+              <div class="small-container-left" style="">
+                <img src="assets/FrobGen.png" alt="" class="title-image">
+              </div>
+              <div class="big-container-right" style="">
+                <h3>SAMSA-Masamu Program</h3>
+                <p class="time-text">November 2022 - March 2023</p>
+                <p style="padding-bottom: 10px;"> For the latter half of November, I attended the <a href="https://cws.auburn.edu/shared/files?id=217&filename=Masamu%202022%20Program%20Files.pdf" target="_blank">Masamu Advanced Study Institute (MASI)</a> and the associated conference in Maputo, Mozambique and found other mathematicians to collaborate on a pure maths problem of our choice. I explored a problem I previously worked on during my REU at Auburn, finding a closed solution to the <a href="https://en.wikipedia.org/wiki/Coin_problem" target="_blank">Frobenius Coin problem</a> in three variables. After arriving back in the states, we continued our work and in the end theorized a geometric algorithm to partition the FC problem into 4 main cases, each having an infinite amount of subcases, and visualized the algorithm in Python. I found an exact equation for the second layer of each case, and the rest of was passed on to future REU students to complete.</p>
+                <button type="button" class="btn btn-outline-success" id="btn4">See more</button>
+              </div>
+            </div>
 
-        <!-- Second Most Recent -->
-        <div class="flex-container" style="padding-bottom: 100px; padding-top: 50px;">
-          <div class="small-container-left" style="">
-            <img src="assets/DIMACS_DNA.png" alt="" class="title-image">
-          </div>
-          <div class="big-container-right" style="">
-            <h3>Rutgers Discrete Mathematics and Theoretical Computer Science (DIMACS) REU</h3>
-            <p class="time-text">June 2022 - Sept 2022</p>
-            <p style="padding-bottom: 10px;">During this <a href="https://reu.dimacs.rutgers.edu/2022/participants.php" target="_blank">REU</a> (Research Experience for Undergraduates), I developed software to simulate the thermal fluctuations of small linear strands of DNA using C++. This involved calculating eigenvectors and eigenvalues to determine the paths of least resistance for base pairs and the probability that any base pair would randomly move. My output files were pdb files, which could be visualized in PyMOL. I also analyzed large amounts of empirical energy deformation data using Python. Along with using this data to calculate the step parameters, I was able to generate heat maps showing the flexibility of step parameters as well as the interdependence between any two step parameters.</p>
-            <button type="button" class="btn btn-outline-success" id="btn6">See more</a>
-          </div>
-        </div>
+            <!-- Second Most Recent -->
+            <div class="flex-container" style="padding-bottom: 100px; padding-top: 50px;">
+              <div class="small-container-left" style="">
+                <img src="assets/DIMACS_DNA.png" alt="" class="title-image">
+              </div>
+              <div class="big-container-right" style="">
+                <h3>Rutgers Discrete Mathematics and Theoretical Computer Science (DIMACS) REU</h3>
+                <p class="time-text">June 2022 - Sept 2022</p>
+                <p style="padding-bottom: 10px;">During this <a href="https://reu.dimacs.rutgers.edu/2022/participants.php" target="_blank">REU</a> (Research Experience for Undergraduates), I developed software to simulate the thermal fluctuations of small linear strands of DNA using C++. This involved calculating eigenvectors and eigenvalues to determine the paths of least resistance for base pairs and the probability that any base pair would randomly move. My output files were pdb files, which could be visualized in PyMOL. I also analyzed large amounts of empirical energy deformation data using Python. Along with using this data to calculate the step parameters, I was able to generate heat maps showing the flexibility of step parameters as well as the interdependence between any two step parameters.</p>
+                <button type="button" class="btn btn-outline-success" id="btn6">See more</a>
+              </div>
+            </div>
 
-        <!-- Third Most Recent -->
-        <div class="flex-container" style="padding-bottom: 100px; padding-top: 50px;">
-          <div class="small-container-left" style="">
-            <img src="assets/AuburnREU_ZoomedIn.png" alt="" class="title-image">
+            <!-- Third Most Recent -->
+            <div class="flex-container" style="padding-bottom: 100px; padding-top: 50px;">
+              <div class="small-container-left" style="">
+                <img src="assets/AuburnREU_ZoomedIn.png" alt="" class="title-image">
+              </div>
+              <div class="big-container-right" style="">
+                <h3>Auburn University's REU in Algebra and Discrete Mathematics</h3>
+                <p class="time-text">June 2021 - July 2021</p>
+                <p style="padding-bottom: 10px;">During this REU, I worked on two research projects, both related to the <a href="https://en.wikipedia.org/wiki/Coin_problem" target="_blank">Frobenius Coin problem</a>. During the first half of my summer, I theorized and proved a solution for a version of the FC problem in the Gaussian integers, publishing the work in <a href="https://geombina.uccs.edu/author-index/travis-pence" target="_blank">Geombinatorics</a> in April of 2022. During the latter half, I worked with a team on finding a closed-form solution to the classical FC problem in three variables. Working off past student's work, we corrected their theorem and provided strong computational evidence for our version. I presented our work virtually at SAMSA (Southern Africa Mathematical Sciences Association) in Nov. 2021.</p>
+                <button type="button" class="btn btn-outline-success" id="btn5">See more</button>
+              </div>
+            </div>
           </div>
-          <div class="big-container-right" style="">
-            <h3>Auburn University's REU in Algebra and Discrete Mathematics</h3>
-            <p class="time-text">June 2021 - July 2021</p>
-            <p style="padding-bottom: 10px;">During this REU, I worked on two research projects, both related to the <a href="https://en.wikipedia.org/wiki/Coin_problem" target="_blank">Frobenius Coin problem</a>. During the first half of my summer, I theorized and proved a solution for a version of the FC problem in the Gaussian integers, publishing the work in <a href="https://geombina.uccs.edu/author-index/travis-pence" target="_blank">Geombinatorics</a> in April of 2022. During the latter half, I worked with a team on finding a closed-form solution to the classical FC problem in three variables. Working off past student's work, we corrected their theorem and provided strong computational evidence for our version. I presented our work virtually at SAMSA (Southern Africa Mathematical Sciences Association) in Nov. 2021.</p>
-            <button type="button" class="btn btn-outline-success" id="btn5">See more</button>
+
+          <!-- Blog Section -->
+          <div class="tab-pane fade" id="blog" role="tabpanel" aria-labelledby="blog-tab">
+            <h2 style="padding-bottom: 20px; padding-top: 20px;">The Latest Dive</h2>
+            <p>This is where my blog posts will go.</p>
+          </div>
+
+          <!-- Past Projects Section (Hidden from Nav) -->
+          <div class="tab-pane fade" id="past-projects" role="tabpanel" aria-labelledby="past-projects-tab">
+            <h2 style="padding-bottom: 20px; padding-top: 20px;">My Past Projects</h2>
+            <!-- Project #1 -->
+            <div class="flex-container-reverse" style="padding-bottom: 50px; padding-top: 40px;">
+              <div class="big-container-left">
+                <h3>Linear Support Vector Machine with Adam Optimizer - C++, no outside libraries</h3>
+                <p class="time-text">August 2024</p>
+                <p>In my Mathematical Foundations of ML class, we covered a wide range of topics, one of which was Kernel Support Vector Machines. Using what I had learned from this class and previous calculus knowledge, I coded a linear SVM by solving the primal using lagrange multipliers. However, I wasn't satisfied with the results as I originally used a constant learning rate. If my learning rate was too large, my decision boundary wouldn't converge to the optimal, but if too small, took an unreasonable amount of time. I experienced the same problem when I implemented an exponential learnign rate, and so I learned about Adam from this <a href="https://machinelearningmastery.com/adam-optimization-from-scratch/" target="_blank">article</a> (even though Adam has it's own hyperparameters). I used validation testing to stop training early. The code for this project can be found <a href="https://github.com/TravisNP/lsvm" target="_blank">here</a>.</p>
+                <button style="padding-bottom: 5px;" type="button" class="btn btn-outline-success" id="btn1">See more</button>
+              </div>
+              <div class="small-container-right">
+                <img src="assets/lsvmGauss.png" class="title-image">
+              </div>
+            </div>
+
+            <!-- Project #2 -->
+            <div class="flex-container-reverse" style="padding-bottom: 50px; padding-top: 40px;">
+              <div class="big-container-left">
+                <h3>Reinforcment Learning by Q-Learning, snake - C++, no outside libraries</h3>
+                <p class="time-text">July - Early August 2024</p>
+                <p>Although I had no knowledge of reinforcement learning besides the basics, I wanted to give it a try. From this <a href="https://medium.com/analytics-vidhya/a-beginners-guide-to-reinforcement-learning-and-its-basic-implementation-from-scratch-2c0b5444cc49" target="_blank">article</a>, I learned about Q-learning through an example of teaching a taxicab the shortest distance to pickup and drop off passengers and decided to apply what I'd learned to create a model that can play the classic video game snake. I carefully thought about how to model the state efficiently so that training would be as fast as possible and used the symmetry of the square to reduce the state space. In the end, I successfully created models that have a >99% completion rate on 4x4 boards, although the code works for any board size less than 10x10. The code for this project can be found <a href="https://github.com/TravisNP/QLearningSnake" target="_blank">here</a>.</p>
+                <button style="padding-bottom: 5px;" type="button" class="btn btn-outline-success" id="btn2">See more</button>
+              </div>
+              <div class="small-container-right">
+                <img src="assets/snakeVisualization.png" class="title-image">
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Contact me / ending section -->
-        <h2 style="padding-bottom: 20px; padding-top: 80px;">Contact Me</h2>
+        <h2 style="padding-bottom: 20px; padding-top: 20px;">Contact Me</h2>
 
-        <img src="assets/travidDome.jpg"  class="rounded-corners" style="">
+        <img src="assets/travidDome.jpg"  class="rounded-corners" id="contact-image" style="">
 
-        <br> <br>
+        <br>
 
         <p style="padding-bottom: 20px;">If you'd like to get into contact with me, please reach out on one of the platforms below.</p>
 
-        <a href="mailto:tpencee@gmail.com" class="fa fa-paper-plane" style="margin-right: 10px"></a>
-        <a href="https://www.linkedin.com/in/travis-pence-cs/" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin" style="margin-right: 10px"></a>
+        <a href="mailto:tnpence@wisc.edu" class="fa fa-paper-plane" style="margin-right: 10px"></a>
+        <a href="https://www.linkedin.com/in/travis-pence-cs/" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin" style="margin-right: 10px; border: 2px solid black;"></a>
         <a href="https://github.com/TravisNP" target="_blank" rel="noopener noreferrer" class="fa fa-github"></a>
 
         <br> <br> <br>
@@ -173,7 +225,7 @@
             <h2>3 Variable Frobenious Coin Problem</h2>
             <br>
             <div>
-              <video loop autoplay style="height: 600px; object-fit: contain; width: 100%;">
+              <video loop autoplay muted playsinline style="height: 600px; object-fit: contain; width: 100%;">
                 <source src="assets/FrobGenVideo.webm" type="video/webm" />
               </video>
             </div>
@@ -215,7 +267,13 @@
       </center>
     </div>
 
+    <!-- Three.js scripts -->
+    <script type="importmap">
+      { "imports": { "three": "https://unpkg.com/three@0.165.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.165.0/examples/jsm/" } }
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="index.js" charset="utf-8"></script>
+    <script type="module" src="3d-widget.js"></script>
   </body>
 </html>

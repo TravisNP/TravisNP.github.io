@@ -128,6 +128,22 @@ p {
   cursor: pointer;
 }
 
+/* Tab navigation styling */
+.nav-tabs {
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 20px;
+}
+
+.nav-tabs .nav-link {
+  color: #495057; /* A dark grey for inactive tabs */
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
+  color: #000;
+}
+
 ul {
   list-style-position: inside;
   list-style-type: square;
@@ -188,6 +204,11 @@ ul {
 
 .fa-paper-plane {
   background: #3D348B;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #0077b5; /* Official LinkedIn blue */
   color: white;
 }
 

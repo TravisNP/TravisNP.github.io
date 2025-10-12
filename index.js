@@ -33,109 +33,58 @@ var granimInstance = new Granim({
     }
 });
 
-//BUTTON 1
-var modal1 = document.getElementById("modal1");
+// --- Modal Logic ---
+// A reusable function to handle modal functionality
+function setupModal(buttonId, modalId, closeClass) {
+  var modal = document.getElementById(modalId);
+  var btn = document.getElementById(buttonId);
+  var span = document.getElementsByClassName(closeClass)[0];
 
-// Get the button that opens the modal
-var btnModal1 = document.getElementById("btn1");
+  if (btn && modal && span) {
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
 
-// Get the <span> element that closes the modal
-var spanModal1 = document.getElementsByClassName("closeModal1")[0];
-
-// When the user clicks on the button, open the modal
-btnModal1.onclick = function() {
-  modal1.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanModal1.onclick = function() {
-  modal1.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal1) {
-    modal1.style.display = "none";
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
   }
 }
 
-//BUTTON 2
-var modal2 = document.getElementById("modal2");
-
-// Get the button that opens the modal
-var btnModal2 = document.getElementById("btn2");
-
-// Get the <span> element that closes the modal
-var spanModal2 = document.getElementsByClassName("closeModal2")[0];
-
-// When the user clicks on the button, open the modal
-btnModal2.onclick = function() {
-  modal2.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanModal2.onclick = function() {
-  modal2.style.display = "none";
-}
+// Setup modals for each button
+setupModal("btn1", "modal1", "closeModal1");
+setupModal("btn2", "modal2", "closeModal2");
+setupModal("btn4", "modal4", "closeModal4");
+setupModal("btn5", "modal5", "closeModal5");
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal2) {
-    modal2.style.display = "none";
+  if (event.target.classList.contains('modal')) {
+    event.target.style.display = "none";
   }
 }
 
-//BUTTON 4
-var modal4 = document.getElementById("modal4");
+// --- Tab Logic for Contact Image ---
+const contactImage = document.getElementById('contact-image');
+const aboutTab = document.getElementById('about-tab');
 
-// Get the button that opens the modal
-var btnModal4 = document.getElementById("btn4");
-
-// Get the <span> element that closes the modal
-var spanModal4 = document.getElementsByClassName("closeModal4")[0];
-
-// When the user clicks on the button, open the modal
-btnModal4.onclick = function() {
-  modal4.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanModal4.onclick = function() {
-  modal4.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal4) {
-    modal4.style.display = "none";
+function toggleContactImage() {
+  if (aboutTab.classList.contains('active')) {
+    contactImage.style.display = 'none';
+  } else {
+    contactImage.style.display = 'block';
   }
 }
 
-//BUTTON 5
-var modal5 = document.getElementById("modal5");
+// Add event listeners to all tabs to check which one is active
+document.querySelectorAll('#myTab .nav-link').forEach(function(tab) {
+  tab.addEventListener('shown.bs.tab', toggleContactImage);
+});
 
-// Get the button that opens the modal
-var btnModal5 = document.getElementById("btn5");
-
-// Get the <span> element that closes the modal
-var spanModal5 = document.getElementsByClassName("closeModal5")[0];
-
-// When the user clicks on the button, open the modal
-btnModal5.onclick = function() {
-  modal5.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanModal5.onclick = function() {
-  modal5.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal5) {
-    modal5.style.display = "none";
-  }
-}
+// Initial check in case the 'About Me' tab is active on page load
+toggleContactImage();
 
 //BUTTON 6 -- links to outside website
 var btn6 = document.getElementById("btn6");
