@@ -34,8 +34,8 @@
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="past-research-tab" data-bs-toggle="tab" data-bs-target="#past-research" type="button" role="tab" aria-controls="past-research" aria-selected="false">Past Research</button>
           </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="blog-tab" data-bs-toggle="tab" data-bs-target="#blog" type="button" role="tab" aria-controls="blog" aria-selected="false">The Latest Dive</button>
+          <li class="nav-item" role="presentation" style="display: none;">
+            <button class="nav-link" id="blog-tab" data-bs-toggle="tab" data-bs-target="#blog" type="button" role="tab" aria-controls="blog" aria-selected="false">Readings</button>
           </li>
         </ul>
 
@@ -75,6 +75,8 @@
                 <p>The red and blue vectors define the purple bivector, which represents an oriented plane. The green point rotates to the yellow point within this plane, with the rotation angle determined by the bivector's magnitude. Note that this visualization only shows the vector component, higher-grade interactions are also transformed by the rotor, but cannot be visualized in 3D. You can move the vectors around to get a better feel for how this works.</p>
               </div>
             </div>
+            <h2 style="padding-bottom: 20px; padding-top: 20px;">Other things I'm thinking about</h2>
+            <p style="text-align: left; padding-left: 5%; padding-right: 5%;">A few of the other ideas I'm exploring are how mathematical structure could influence tree embeddings, imporve latent space steering, provide better future-token knowledge in multi-token generation, and enable better reasoning in LLMs. I'm grateful to Daisuke Yamada, a fellow grad student, for listening and helping me with my ideas, and to my advisor Dr. Vikas Singh for his guidance and support.</p>
           </div>
 
           <!-- Past Research Section -->
@@ -87,8 +89,8 @@
               </div>
               <div class="big-container-right" style="">
                 <h3>SAMSA-Masamu Program</h3>
-                <p class="time-text">November 2022 - March 2023</p>
-                <p style="padding-bottom: 10px;"> For the latter half of November, I attended the <a href="https://cws.auburn.edu/shared/files?id=217&filename=Masamu%202022%20Program%20Files.pdf" target="_blank">Masamu Advanced Study Institute (MASI)</a> and the associated conference in Maputo, Mozambique and found other mathematicians to collaborate on a pure maths problem of our choice. I explored a problem I previously worked on during my REU at Auburn, finding a closed solution to the <a href="https://en.wikipedia.org/wiki/Coin_problem" target="_blank">Frobenius Coin problem</a> in three variables. After arriving back in the states, we continued our work and in the end theorized a geometric algorithm to partition the FC problem into 4 main cases, each having an infinite amount of subcases, and visualized the algorithm in Python. I found an exact equation for the second layer of each case, and the rest of was passed on to future REU students to complete.</p>
+                <p class="time-text">November 2022 - May 2023</p>
+                <p style="padding-bottom: 10px;"> For the latter half of November, I attended the <a href="assets/Masamu_2022_Program_Files.pdf" target="_blank">Masamu Advanced Study Institute (MASI)</a> and the associated conference in Maputo, Mozambique and found other mathematicians to collaborate on a pure maths problem of our choice. I explored a problem I previously worked on during my REU at Auburn, finding a closed solution to the <a href="https://en.wikipedia.org/wiki/Coin_problem" target="_blank">Frobenius Coin problem</a> in three variables. After arriving back in the states, we continued our work and in the end theorized a geometric algorithm to partition the FC problem into 4 main cases, each having an infinite amount of subcases, and visualized the algorithm in Python. I found an exact equation for the second layer of each case, and the rest of was passed on to future REU students to complete.</p>
                 <button type="button" class="btn btn-outline-success" id="btn4">See more</button>
               </div>
             </div>
@@ -114,7 +116,7 @@
               <div class="big-container-right" style="">
                 <h3>Auburn University's REU in Algebra and Discrete Mathematics</h3>
                 <p class="time-text">June 2021 - July 2021</p>
-                <p style="padding-bottom: 10px;">During this REU, I worked on two research projects, both related to the <a href="https://en.wikipedia.org/wiki/Coin_problem" target="_blank">Frobenius Coin problem</a>. During the first half of my summer, I theorized and proved a solution for a version of the FC problem in the Gaussian integers, publishing the work in <a href="https://geombina.uccs.edu/author-index/travis-pence" target="_blank">Geombinatorics</a> in April of 2022. During the latter half, I worked with a team on finding a closed-form solution to the classical FC problem in three variables. Working off past student's work, we corrected their theorem and provided strong computational evidence for our version. I presented our work virtually at SAMSA (Southern Africa Mathematical Sciences Association) in Nov. 2021.</p>
+                <p style="padding-bottom: 10px;">During this REU, I worked on two research projects, both related to the <a href="https://en.wikipedia.org/wiki/Coin_problem" target="_blank">Frobenius Coin problem</a>. During the first half of my summer, I theorized and proved a solution for a version of the FC problem in the Gaussian integers, publishing the work in <a href="https://geombina.uccs.edu/author-index/travis-pence" target="_blank">Geombinatorics</a> in April of 2022. During the latter half, I worked with a team on finding a closed-form solution to the classical FC problem in three variables. Working off past student's work, we corrected their theorem and provided strong computational evidence for our version. I presented our work virtually at SAMSA (Southern Africa Mathematical Sciences Association) in Nov. 2021 at the <a href="assets/Masamu_2021_Combined_Files_to_Post.pdf" target="_blank">SAMSA 2021 Conference</a>.</p>
                 <button type="button" class="btn btn-outline-success" id="btn5">See more</button>
               </div>
             </div>
@@ -122,8 +124,8 @@
 
           <!-- Blog Section -->
           <div class="tab-pane fade" id="blog" role="tabpanel" aria-labelledby="blog-tab">
-            <h2 style="padding-bottom: 20px; padding-top: 20px;">The Latest Dive</h2>
-            <p>This is where my blog posts will go.</p>
+            <h2 style="padding-bottom: 20px; padding-top: 20px;">Readings</h2>
+            <p>This is just a section of the website I want to update bi-weekly on a paper I found interesting. Feel free to read if interested.</p>
           </div>
 
           <!-- Past Projects Section (Hidden from Nav) -->
@@ -258,7 +260,7 @@
             <p>{(r+si)a + (t+ui)v | r,s,t,v &#8805; 0}</p>
             <p>yield the dots in the above picture. The angular sector must have bounds that follow the angles of the two original points, a and b. In the picture, these are the green and red lines. The problem reduces to finding their point of intersection, the red point. You'll notice that above the green and red lines, there are no spaces in the lattice (every space has a blue dot), which means that the red point defines a valid angular sector. However, is it maximal? Clearly if you move the green line down an integer, there will be blue dots missing, and so the green bound is maximal. For the red bound, I have plotted the same line shifted by one integer in purple. You can see that there are blue dots missing above the purple line, and so the red line is maximal. You can see the code used to generate the graph <a href="https://colab.research.google.com/drive/13o5wedeM8a_KydD0FkvFWKg3Y4YP15jm?usp=sharing" target="_blank">here</a>.</p>
             <p>I theorized an equation for the red dot under certain conditions (at least one real/imaginary part of a or b must be zero) and proved certain parts under relative primality conditions. However, when you restrict the combination to be with only natural numbers (t and u must be 0), I theorized and proved that the red dot exists, and is (0,0), if and only if the determinant of a and b has magnitude 1. We <a href="https://geombina.uccs.edu/author-index/travis-pence" target="_blank">published</a> this in April 2022.</p>
-            <p>At the start of July, another student and I took on another project that had been passed down to REU particpants for 10+ years, another frobenius problem. Given three natural numbers with coprimality conditions, is there a closed formula for the last number that cannot be expressed as linear combination with non-negative coefficients? We were given an equation and partially finished proofs and asked to finish the job. Eventually, I realized the equation was wrong, corrected it, and while I wasn't able to prove it, provided strong computational evidence using Mathematica that my version was correct. I virtually presented my work under the advisement of my REU mentor at the <a href="https://cws.auburn.edu/shared/files?id=217&filename=Masamu%202021%20Combined%20Files%20to%20Post.pdf" target="_blank">SAMSA 2021 Conference</a>.</p>
+            <p>At the start of July, another student and I took on another project that had been passed down to REU particpants for 10+ years, another frobenius problem. Given three natural numbers with coprimality conditions, is there a closed formula for the last number that cannot be expressed as linear combination with non-negative coefficients? We were given an equation and partially finished proofs and asked to finish the job. Eventually, I realized the equation was wrong, corrected it, and while I wasn't able to prove it, provided strong computational evidence using Mathematica that my version was correct. I virtually presented my work under the advisement of my REU mentor at the <a href="assets/Masamu_2021_Combined_Files_to_Post.pdf" target="_blank">SAMSA 2021 Conference</a>.</p>
           </div>
         </div>
 

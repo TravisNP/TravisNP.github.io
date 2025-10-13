@@ -205,19 +205,20 @@ function animate() {
 function updateRotationArc(startPoint, axis, angle, endPoint) {
     const arcPoints = [];
     const segments = 32;
-    const axisVector = new THREE.Vector3(...axis);
+    // Negate the axis to draw the arc in the opposite direction
+    // To draw the "other part of the circle", we use the supplementary angle and the negated axis.
+    const axisVector = new THREE.Vector3(...axis).negate();
 
     if (angle < 1e-10) {
         arcLine.geometry.setFromPoints([]);
         arcHead.visible = false;
         return;
     }
-
     arcHead.visible = true;
     for (let i = 0; i <= segments; i++) {
         const t = i / segments;
-        const currentAngle = angle * t;
-        const pointOnArc = startPoint.clone().applyAxisAngle(axisVector, currentAngle);
+        const displayAngle = (2 * Math.PI - angle);
+        const pointOnArc = startPoint.clone().applyAxisAngle(axisVector, displayAngle * t);
         arcPoints.push(pointOnArc);
     }
     arcLine.geometry.setFromPoints(arcPoints);
